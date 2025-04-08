@@ -53,8 +53,8 @@ ggplot(summary_data, aes(x = YearMonth, y = mean_value, color = Collection, grou
 
   # Labels and theme
   labs(
-    title = "Mean Values by Month and Category",
-    subtitle = "With Min-Max Range and Value Labels",
+    title = "Average Cart Times",
+    subtitle = "With Min-Max Range",
     x = "Month",
     y = "Value",
     color = "Category",
@@ -68,3 +68,5 @@ ggplot(summary_data, aes(x = YearMonth, y = mean_value, color = Collection, grou
     plot.title = element_text(face = "bold", size = 14),
     legend.title = element_text(face = "bold")
   )
+
+ggsave(filename = "graph.png", width = 10, height = 10, bg = "white")
